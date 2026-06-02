@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Counter Studio – Create. Teach. Launch. | Kokapet, Hyderabad</title>
+  <meta name="description" content="Counter Studio is a premium creative studio with a professional kitchen in Kokapet, Hyderabad. Built for content creators, educators, and food brands." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Counter Studio – Create. Teach. Launch." />
+  <meta property="og:description" content="A creative studio with a professional kitchen for creators, educators and food brands. Kokapet, Hyderabad." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="IMG_5949.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── TOKENS ─── */
+    :root {
+      --ivory:      #FAF6EF;
+      --terra:      #C56A4A;
+      --terra-dark: #A8532E;
+      --olive:      #5B6F46;
+      --olive-light:#7A9060;
+      --charcoal:   #222222;
+      --charcoal-80:#3a3a3a;
+      --dark-bg:    #1A1714;
+      --border:     rgba(34,34,34,0.10);
+      --ff-head:    'Playfair Display', Georgia, serif;
+      --ff-body:    'Inter', sans-serif;
+      --ease:       cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* ─── RESET ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--ivory);
+      color: var(--charcoal);
+      font-family: var(--ff-body);
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── UTILITY ─── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-label {
+      font-family: var(--ff-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 16px;
+    }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      font-family: var(--ff-body);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.25s var(--ease);
+      border: none;
+    }
+    .btn-primary {
+      background: var(--terra);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: var(--terra-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(197,106,74,0.35);
+    }
+    .btn-whatsapp {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.5);
+    }
+    .btn-whatsapp:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #fff;
+    }
+    .btn-dark {
+      background: var(--terra);
+      color: #fff;
+    }
+    .btn-dark:hover {
+      background: var(--terra-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(197,106,74,0.4);
+    }
+    .btn-outline-dark {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.45);
+    }
+    .btn-outline-dark:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.8);
+    }
+
+    /* ─────────────────────────────────────
+       HEADER / NAV
+    ───────────────────────────────────── */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 0;
+      transition: background 0.35s var(--ease), padding 0.35s var(--ease), box-shadow 0.35s var(--ease);
+    }
+    #header.scrolled {
+      background: rgba(250,246,239,0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 14px 0;
+      box-shadow: 0 1px 0 var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      transition: filter 0.35s var(--ease);
+    }
+    #header.scrolled .nav-logo img {
+      
+    }
+    .nav-cta {
+      display: flex;
+      gap: 12px;
+    }
+    .nav-cta .btn {
+      padding: 10px 20px;
+      font-size: 13px;
+    }
+    .nav-btn-primary {
+      background: var(--terra);
+      color: #fff;
+    }
+    #header:not(.scrolled) .nav-btn-wa {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.4);
+    }
+    #header.scrolled .nav-btn-wa {
+      background: transparent;
+      color: var(--charcoal);
+      border: 1.5px solid var(--border);
+    }
+    #header.scrolled .nav-btn-wa:hover {
+      border-color: var(--charcoal);
+    }
+
+    /* ─────────────────────────────────────
+       SECTION 1 – HERO
+    ───────────────────────────────────── */
+    #hero {
+      position: relative;
+      height: 100svh;
+      min-height: 600px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 80px;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('hero.jpg');
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.04);
+      transition: transform 8s ease-out;
+    }
+    .hero-bg.loaded { transform: scale(1); }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(18,14,12,0.88) 0%,
+        rgba(18,14,12,0.45) 50%,
+        rgba(18,14,12,0.15) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+    }
+    .hero-location {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.7s 0.2s var(--ease) forwards;
+    }
+    .hero-location svg { opacity: 0.65; }
+    .hero-h1 {
+      font-family: var(--ff-head);
+      font-size: clamp(42px, 7vw, 86px);
+      font-weight: 500;
+      line-height: 1.05;
+      color: #fff;
+      margin-bottom: 16px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.8s 0.35s var(--ease) forwards;
+    }
+    .hero-tagline {
+      font-family: var(--ff-head);
+      font-size: clamp(16px, 2.5vw, 22px);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--terra);
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.7s 0.5s var(--ease) forwards;
+    }
+    .hero-sub {
+      font-size: clamp(14px, 1.6vw, 17px);
+      font-weight: 300;
+      color: rgba(255,255,255,0.72);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.7s 0.65s var(--ease) forwards;
+    }
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.7s 0.8s var(--ease) forwards;
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 28px;
+      right: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0;
+      animation: fadeIn 0.7s 1.2s forwards;
+    }
+    .hero-scroll span {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      writing-mode: vertical-rl;
+    }
+    .hero-scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+      animation: scrollPulse 2s 1.4s infinite;
+    }
+
+    /* ─────────────────────────────────────
+       SECTION 2 – ABOUT
+    ───────────────────────────────────── */
+    #about {
+      padding: 120px 0;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-image {
+      position: relative;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .about-image img {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.7s var(--ease);
+    }
+    .about-image:hover img { transform: scale(1.03); }
+    .about-image-accent {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 120px;
+      height: 120px;
+      background: var(--terra);
+      opacity: 0.12;
+      border-radius: 2px;
+      z-index: -1;
+    }
+    .about-text h2 {
+      font-family: var(--ff-head);
+      font-size: clamp(30px, 3.5vw, 46px);
+      font-weight: 500;
+      line-height: 1.18;
+      color: var(--charcoal);
+      margin-bottom: 28px;
+    }
+    .about-text p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--charcoal-80);
+      margin-bottom: 20px;
+    }
+    .about-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--terra);
+      margin-bottom: 28px;
+    }
+
+    /* ─────────────────────────────────────
+       SECTION 3 – WHO IT'S FOR
+    ───────────────────────────────────── */
+    #who {
+      padding: 100px 0;
+      background: var(--charcoal);
+    }
+    .who-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .who-header .section-label { color: var(--terra); }
+    .who-header h2 {
+      font-family: var(--ff-head);
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .who-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .who-card {
+      background: rgba(255,255,255,0.04);
+      padding: 48px 36px;
+      border: 1px solid rgba(255,255,255,0.07);
+      transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+      position: relative;
+      overflow: hidden;
+    }
+    .who-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 0;
+      background: var(--terra);
+      transition: height 0.4s var(--ease);
+    }
+    .who-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.12); }
+    .who-card:hover::before { height: 100%; }
+    .who-card-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 24px;
+      color: var(--terra);
+    }
+    .who-card h3 {
+      font-family: var(--ff-head);
+      font-size: 22px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .who-card ul {
+      list-style: none;
+    }
+    .who-card ul li {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .who-card ul li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--terra);
+      flex-shrink: 0;
+    }
+    .who-card ul li:last-child { border-bottom: none; }
+
+    /* ─────────────────────────────────────
+       SECTION 4 – FEATURE IMAGE
+    ───────────────────────────────────── */
+    #feature {
+      position: relative;
+      height: 70vh;
+      min-height: 440px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .feature-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('workshop.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .feature-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(18,14,12,0.60);
+    }
+    .feature-text {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 24px;
+    }
+    .feature-text h2 {
+      font-family: var(--ff-head);
+      font-size: clamp(28px, 5vw, 62px);
+      font-weight: 500;
+      font-style: italic;
+      color: #fff;
+      line-height: 1.2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ─────────────────────────────────────
+       SECTION 5 – KITCHEN
+    ───────────────────────────────────── */
+    #kitchen {
+      padding: 120px 0;
+    }
+    .kitchen-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .kitchen-text { order: 1; }
+    .kitchen-image { order: 2; }
+    .kitchen-image img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+    .kitchen-text h2 {
+      font-family: var(--ff-head);
+      font-size: clamp(28px, 3.2vw, 44px);
+      font-weight: 500;
+      line-height: 1.18;
+      color: var(--charcoal);
+      margin-bottom: 20px;
+    }
+    .kitchen-text p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--charcoal-80);
+      margin-bottom: 36px;
+    }
+    .kitchen-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .kitchen-feature {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .kitchen-feature::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--olive);
+      flex-shrink: 0;
+    }
+
+    /* ─────────────────────────────────────
+       SECTION 6 – WHAT'S INCLUDED
+    ───────────────────────────────────── */
+    #included {
+      padding: 100px 0;
+      background: #F3EDE2;
+    }
+    .included-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .included-header h2 {
+      font-family: var(--ff-head);
+      font-size: clamp(26px, 3vw, 40px);
+      font-weight: 500;
+      color: var(--charcoal);
+    }
+    .included-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .included-item {
+      background: var(--ivory);
+      padding: 36px 24px;
+      text-align: center;
+      transition: background 0.25s var(--ease);
+    }
+    .included-item:hover { background: #fff; }
+    .included-icon {
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 16px;
+      color: var(--olive);
+    }
+    .included-item span {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--charcoal);
+    }
+
+    /* ─────────────────────────────────────
+       SECTION 7 – CTA
+    ───────────────────────────────────── */
+    #cta {
+      padding: 120px 0;
+      background: var(--dark-bg);
+      position: relative;
+      overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(197,106,74,0.12), transparent 70%);
+      pointer-events: none;
+    }
+    .cta-inner {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .cta-inner .section-label { color: var(--terra); }
+    .cta-inner h2 {
+      font-family: var(--ff-head);
+      font-size: clamp(30px, 4vw, 54px);
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-inner p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.55);
+      max-width: 540px;
+      margin: 0 auto 44px;
+    }
+    .cta-btns {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* ─────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────── */
+    footer {
+      background: var(--dark-bg);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 40px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo img {
+      height: 32px;
+      opacity: 0.5; object-fit: contain;
+    }
+    .footer-copy {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-location {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ─────────────────────────────────────
+       MOBILE STICKY CTA
+    ───────────────────────────────────── */
+    #sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 200;
+      background: var(--dark-bg);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 12px 20px;
+      gap: 10px;
+    }
+    #sticky-cta .btn {
+      flex: 1;
+      justify-content: center;
+      padding: 14px 12px;
+      font-size: 13px;
+    }
+
+    /* ─────────────────────────────────────
+       ANIMATIONS
+    ───────────────────────────────────── */
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.2); }
+    }
+
+    /* Reveal on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ─────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────── */
+    @media (max-width: 900px) {
+      .about-grid,
+      .kitchen-grid { grid-template-columns: 1fr; gap: 48px; }
+      .kitchen-text { order: 1; }
+      .kitchen-image { order: 2; }
+      .about-image img,
+      .kitchen-image img { height: 340px; }
+      .who-cards { grid-template-columns: 1fr; }
+      .included-grid { grid-template-columns: repeat(2, 1fr); }
+      .feature-bg { background-attachment: scroll; }
+      .nav-cta { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 0 18px; }
+      #about, #kitchen { padding: 80px 0; }
+      #who, #included { padding: 72px 0; }
+      #cta { padding: 80px 0; }
+      #hero { padding-bottom: 100px; }
+      .hero-btns .btn { flex: 1; justify-content: center; min-width: 140px; }
+      .included-grid { grid-template-columns: repeat(2, 1fr); }
+      .kitchen-features { grid-template-columns: 1fr; }
+      #sticky-cta { display: flex; }
+      body { padding-bottom: 70px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 400px) {
+      .hero-h1 { font-size: 36px; }
+      .included-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── HEADER ─── -->
+  <header id="header">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="#" class="nav-logo" aria-label="Counter Studio">
+          <img src="CounterStudio.png" alt="Counter Studio" />
+        </a>
+        <div class="nav-cta">
+          <a href="https://forms.gle/33P8eHRHRikQD4ET9" target="_blank" rel="noopener" class="btn nav-btn-primary btn-primary">Request Availability</a>
+          <a href="https://wa.me/918886787766" target="_blank" rel="noopener" class="btn nav-btn-wa">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.094.541 4.063 1.489 5.779L0 24l6.389-1.667A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.016-1.374l-.36-.213-3.732.973 1.002-3.62-.234-.372A9.818 9.818 0 0112 2.182c5.426 0 9.818 4.392 9.818 9.818 0 5.427-4.392 9.818-9.818 9.818z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ─── SECTION 1: HERO ─── -->
+  <section id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-location">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          Kokapet, Hyderabad
+        </p>
+        <h1 class="hero-h1">Counter Studio</h1>
+        <p class="hero-tagline">Create. Teach. Launch.</p>
+        <p class="hero-sub">A creative studio with a professional kitchen for creators, educators and food brands.</p>
+        <div class="hero-btns">
+          <a href="https://forms.gle/33P8eHRHRikQD4ET9" target="_blank" rel="noopener" class="btn btn-primary">Request Availability</a>
+          <a href="https://wa.me/918886787766" target="_blank" rel="noopener" class="btn btn-whatsapp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.094.541 4.063 1.489 5.779L0 24l6.389-1.667A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.016-1.374l-.36-.213-3.732.973 1.002-3.62-.234-.372A9.818 9.818 0 0112 2.182c5.426 0 9.818 4.392 9.818 9.818 0 5.427-4.392 9.818-9.818 9.818z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 2: ABOUT ─── -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="about.jpg" alt="Counter Studio space" loading="lazy" />
+          <div class="about-image-accent"></div>
+        </div>
+        <div class="about-text reveal reveal-delay-1">
+          <p class="section-label">About the Space</p>
+          <div class="about-divider"></div>
+          <h2>A Space Designed For Food Creators</h2>
+          <p>Counter Studio combines a professional culinary kitchen with a flexible workshop and content creation environment.</p>
+          <p>Whether you're filming recipe content, hosting a masterclass, developing a product or planning a tasting event, the space is designed to support the entire creative process.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 3: WHO IT'S FOR ─── -->
+  <section id="who">
+    <div class="container">
+      <div class="who-header reveal">
+        <p class="section-label">The Studio is for</p>
+        <h2>Who is this space for?</h2>
+      </div>
+      <div class="who-cards">
+
+        <div class="who-card reveal">
+          <div class="who-card-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="12" width="32" height="24" rx="2"/>
+              <circle cx="24" cy="24" r="6"/>
+              <circle cx="24" cy="24" r="2"/>
+              <path d="M8 17h4M36 17h4"/>
+            </svg>
+          </div>
+          <h3>Content Creation</h3>
+          <ul>
+            <li>Recipe videos</li>
+            <li>Photography</li>
+            <li>Social content</li>
+            <li>Brand shoots</li>
+          </ul>
+        </div>
+
+        <div class="who-card reveal reveal-delay-1">
+          <div class="who-card-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 36V16l16-8 16 8v20"/>
+              <path d="M18 36v-8h12v8"/>
+              <path d="M24 8v8"/>
+              <circle cx="24" cy="20" r="3"/>
+            </svg>
+          </div>
+          <h3>Workshops</h3>
+          <ul>
+            <li>Baking classes</li>
+            <li>Cooking demonstrations</li>
+            <li>Masterclasses</li>
+            <li>Training</li>
+          </ul>
+        </div>
+
+        <div class="who-card reveal reveal-delay-2">
+          <div class="who-card-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 36c0-8 4-14 12-16 8 2 12 8 12 16"/>
+              <path d="M20 20c0-4 2-8 4-10 2 2 4 6 4 10"/>
+              <path d="M8 36h32"/>
+              <path d="M16 28h16"/>
+            </svg>
+          </div>
+          <h3>Food Brands</h3>
+          <ul>
+            <li>Product development</li>
+            <li>Launches</li>
+            <li>Tastings</li>
+            <li>Menu testing</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 4: FEATURE IMAGE ─── -->
+  <section id="feature">
+    <div class="feature-bg"></div>
+    <div class="feature-overlay"></div>
+    <div class="feature-text reveal">
+      <h2>Built for teaching,<br />filming and creating.</h2>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 5: KITCHEN ─── -->
+  <section id="kitchen">
+    <div class="container">
+      <div class="kitchen-grid">
+        <div class="kitchen-text reveal">
+          <p class="section-label">The Kitchen</p>
+          <div class="about-divider"></div>
+          <h2>Professional Kitchen</h2>
+          <p>A serious culinary workspace equipped for recipe development, workshops, content production and product testing.</p>
+          <div class="kitchen-features">
+            <div class="kitchen-feature">Rational 6 Rack Oven</div>
+            <div class="kitchen-feature">KitchenAid Mixer</div>
+            <div class="kitchen-feature">Commercial Chiller</div>
+            <div class="kitchen-feature">Commercial Freezer</div>
+            <div class="kitchen-feature">Display Chiller</div>
+            <div class="kitchen-feature">Stainless Prep Stations</div>
+            <div class="kitchen-feature">Induction Cooking</div>
+            <div class="kitchen-feature">Speed Rack</div>
+          </div>
+        </div>
+        <div class="kitchen-image reveal reveal-delay-1">
+          <img src="kitchen.jpg" alt="Professional kitchen at Counter Studio" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 6: WHAT'S INCLUDED ─── -->
+  <section id="included">
+    <div class="container">
+      <div class="included-header reveal">
+        <p class="section-label">Everything You Need</p>
+        <h2>What's Included</h2>
+      </div>
+      <div class="included-grid">
+
+        <div class="included-item reveal">
+          <div class="included-icon">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="22" cy="16" r="8"/>
+              <path d="M22 8v16M14 16h16"/>
+              <path d="M10 36c2-4 6-6 12-6s10 2 12 6"/>
+            </svg>
+          </div>
+          <span>Lighting</span>
+        </div>
+
+        <div class="included-item reveal reveal-delay-1">
+          <div class="included-icon">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="8" width="32" height="24" rx="2"/>
+              <path d="M14 38h16M22 32v6"/>
+              <path d="M12 16h6M12 22h20"/>
+            </svg>
+          </div>
+          <span>Whiteboard</span>
+        </div>
+
+        <div class="included-item reveal reveal-delay-2">
+          <div class="included-icon">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 28c0 0 2-4 6-4s6 4 6 4 2-4 6-4 6 4 6 4"/>
+              <rect x="10" y="30" width="4" height="6" rx="1"/>
+              <rect x="20" y="30" width="4" height="6" rx="1"/>
+              <rect x="30" y="30" width="4" height="6" rx="1"/>
+              <path d="M6 24h32"/>
+            </svg>
+          </div>
+          <span>Workshop Seating</span>
+        </div>
+
+        <div class="included-item reveal reveal-delay-3">
+          <div class="included-icon">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="10" width="12" height="18" rx="2"/>
+              <rect x="24" y="10" width="12" height="18" rx="2"/>
+              <path d="M6 28h32M14 28v8M30 28v8M10 36h8M26 36h8"/>
+            </svg>
+          </div>
+          <span>Parking</span>
+        </div>
+
+        <div class="included-item reveal">
+          <div class="included-icon">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="14" y="6" width="16" height="32" rx="2"/>
+              <path d="M22 10v4M22 30v4"/>
+              <path d="M18 20h8"/>
+              <path d="M14 14H8M14 30H8M30 14h6M30 30h6"/>
+            </svg>
+          </div>
+          <span>Vendor Lift</span>
+        </div>
+
+        <div class="included-item reveal reveal-delay-1">
+          <div class="included-icon">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 18c0-8.8 7.2-16 16-16s16 7.2 16 16"/>
+              <path d="M12 22c0-5.5 4.5-10 10-10s10 4.5 10 10"/>
+              <path d="M18 26c0-2.2 1.8-4 4-4s4 1.8 4 4"/>
+              <circle cx="22" cy="30" r="2.5"/>
+            </svg>
+          </div>
+          <span>WiFi</span>
+        </div>
+
+        <div class="included-item reveal reveal-delay-2">
+          <div class="included-icon">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="10" y="8" width="24" height="20" rx="2"/>
+              <path d="M16 8v20M28 8v20"/>
+              <path d="M14 36l-4-8h24l-4 8"/>
+              <path d="M16 36h12"/>
+            </svg>
+          </div>
+          <span>Air Conditioning</span>
+        </div>
+
+        <div class="included-item reveal reveal-delay-3">
+          <div class="included-icon">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="12" width="32" height="22" rx="2"/>
+              <path d="M14 34v4M30 34v4M10 38h24"/>
+              <path d="M22 18v4M16 21h12"/>
+            </svg>
+          </div>
+          <span>Display Equipment</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 7: CTA ─── -->
+  <section id="cta">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <p class="section-label">Get In Touch</p>
+        <h2>Tell Us About Your Project</h2>
+        <p>Whether you're planning a workshop, content shoot, product launch or recipe development session, we'd love to hear what you're creating.</p>
+        <div class="cta-btns">
+          <a href="https://forms.gle/33P8eHRHRikQD4ET9" target="_blank" rel="noopener" class="btn btn-dark">Request Availability</a>
+          <a href="https://wa.me/918886787766" target="_blank" rel="noopener" class="btn btn-outline-dark">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.094.541 4.063 1.489 5.779L0 24l6.389-1.667A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.016-1.374l-.36-.213-3.732.973 1.002-3.62-.234-.372A9.818 9.818 0 0112 2.182c5.426 0 9.818 4.392 9.818 9.818 0 5.427-4.392 9.818-9.818 9.818z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <img src="CounterStudio.png" alt="Counter Studio" />
+        </div>
+        <p class="footer-location">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          Kokapet, Hyderabad
+        </p>
+        <p class="footer-copy">© 2025 Counter Studio. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── MOBILE STICKY CTA ─── -->
+  <div id="sticky-cta" aria-label="Quick actions">
+    <a href="https://forms.gle/33P8eHRHRikQD4ET9" target="_blank" rel="noopener" class="btn btn-primary">Request Availability</a>
+    <a href="https://wa.me/918886787766" target="_blank" rel="noopener" class="btn btn-outline-dark">WhatsApp</a>
+  </div>
+
+  <!-- ─── JS ─── -->
+  <script>
+    // Header scroll state
+    const header = document.getElementById('header');
+    const heroBg = document.getElementById('heroBg');
+
+    // Subtle hero bg load animation
+    window.addEventListener('load', () => {
+      heroBg.classList.add('loaded');
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    // Hide sticky CTA near footer (avoid overlap)
+    const footer = document.querySelector('footer');
+    const stickyCTA = document.getElementById('sticky-cta');
+    const footerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        stickyCTA.style.opacity = e.isIntersecting ? '0' : '1';
+        stickyCTA.style.pointerEvents = e.isIntersecting ? 'none' : 'all';
+      });
+    }, { threshold: 0.1 });
+    footerObserver.observe(footer);
+  </script>
+
+</body>
+</html>
