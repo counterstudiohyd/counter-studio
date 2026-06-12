@@ -3,16 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Counter Studio – Create. Teach. Launch. | Kokapet, Hyderabad</title>
-  <meta name="description" content="Counter Studio is a premium creative studio with a professional kitchen in Kokapet, Hyderabad. Built for content creators, educators, and food brands." />
-  <meta name="robots" content="noindex, nofollow" />
+  <title>Counter Studio | Culinary Studio Rental in Kokapet, Hyderabad</title>
+  <meta name="description" content="Rent a professional culinary studio in Kokapet, Hyderabad. Ideal for food content creation, workshops, recipe development, chef demonstrations, product launches and brand activations." />
+  <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Counter Studio – Create. Teach. Launch." />
   <meta property="og:description" content="A creative studio with a professional kitchen for creators, educators and food brands. Kokapet, Hyderabad." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="IMG_5949.jpg" />
-
+  <meta property="og:image" content="hero.jpg" />
+  <!-- LocalBusiness schema placeholders: update geo latitude/longitude, openingHours and sameAs when final studio details are confirmed. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Counter Studio",
+    "category": "Creative Studio",
+    "description": "Professional culinary studio for content creation, workshops and product development.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kokapet",
+      "addressRegion": "Hyderabad",
+      "addressCountry": "IN"
+    },
+    "telephone": "+918886787766",
+    "url": "REPLACE_WITH_LIVE_VERCEL_URL",
+    "image": "hero.jpg",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "REPLACE_WITH_LATITUDE",
+      "longitude": "REPLACE_WITH_LONGITUDE"
+    },
+    "openingHours": "REPLACE_WITH_OPENING_HOURS",
+    "sameAs": [
+      "REPLACE_WITH_SOCIAL_PROFILE_URL"
+    ]
+  }
+  </script>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -197,9 +224,9 @@
       inset: 0;
       background: linear-gradient(
         to top,
-        rgba(18,14,12,0.62) 0%,
-        rgba(18,14,12,0.28) 50%,
-        rgba(18,14,12,0.05) 100%
+        rgba(18,14,12,0.88) 0%,
+        rgba(18,14,12,0.45) 50%,
+        rgba(18,14,12,0.15) 100%
       );
     }
     .hero-content {
@@ -446,7 +473,7 @@
     .feature-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(18,14,12,0.42);
+      background: rgba(18,14,12,0.60);
     }
     .feature-text {
       position: relative;
@@ -680,6 +707,415 @@
       50% { opacity: 1; transform: scaleY(1.2); }
     }
 
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 56px;
+    }
+    .section-header h2 {
+      font-family: var(--ff-head);
+      font-size: clamp(28px, 3.2vw, 44px);
+      font-weight: 500;
+      line-height: 1.18;
+      color: var(--charcoal);
+      margin-bottom: 18px;
+    }
+    .section-header p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--charcoal-80);
+    }
+    .section-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 36px;
+    }
+    .btn-outline-ivory {
+      background: transparent;
+      color: var(--charcoal);
+      border: 1.5px solid var(--border);
+    }
+    .btn-outline-ivory:hover {
+      border-color: var(--charcoal);
+      transform: translateY(-1px);
+    }
+
+    #pricing {
+      padding: 110px 0;
+      background: #F3EDE2;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .pricing-card {
+      background: var(--ivory);
+      border: 1px solid rgba(34,34,34,0.08);
+      padding: 42px 34px;
+      position: relative;
+      transition: transform 0.3s var(--ease), background 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    }
+    .pricing-card:hover {
+      background: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 18px 48px rgba(34,34,34,0.08);
+    }
+    .pricing-card.recommended::before {
+      content: 'Recommended';
+      position: absolute;
+      top: 22px;
+      right: 24px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--terra);
+    }
+    .pricing-card .pricing-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 12px;
+    }
+    .pricing-card h3 {
+      font-family: var(--ff-head);
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+    .pricing-duration {
+      font-size: 13px;
+      color: var(--charcoal-80);
+      margin-bottom: 24px;
+    }
+    .pricing-price {
+      font-family: var(--ff-head);
+      font-size: 38px;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 28px;
+    }
+    .pricing-card ul {
+      list-style: none;
+    }
+    .pricing-card li {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--charcoal-80);
+    }
+    .pricing-card li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--olive);
+      flex-shrink: 0;
+    }
+    .pricing-note {
+      max-width: 680px;
+      margin: 32px auto 0;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--charcoal-80);
+    }
+
+    #gallery {
+      padding: 110px 0;
+      background: var(--ivory);
+    }
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: -24px 0 42px;
+    }
+    .gallery-filter {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      color: var(--charcoal-80);
+      cursor: pointer;
+      font-family: var(--ff-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      padding: 10px 14px;
+      text-transform: uppercase;
+      transition: all 0.25s var(--ease);
+    }
+    .gallery-filter:hover,
+    .gallery-filter.active {
+      border-color: var(--terra);
+      color: var(--terra);
+      background: rgba(197,106,74,0.06);
+    }
+    .gallery-grid {
+      column-count: 3;
+      column-gap: 18px;
+    }
+    .gallery-item {
+      break-inside: avoid;
+      margin: 0 0 18px;
+      cursor: pointer;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+    }
+    .gallery-item.is-hidden {
+      opacity: 0;
+      transform: translateY(12px);
+      display: none;
+    }
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+      background: var(--charcoal);
+    }
+    .gallery-card img {
+      width: 100%;
+      min-height: 280px;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease), opacity 0.4s var(--ease);
+    }
+    .gallery-item:nth-child(2) img,
+    .gallery-item:nth-child(5) img { min-height: 380px; }
+    .gallery-card:hover img {
+      transform: scale(1.035);
+      opacity: 0.82;
+    }
+    .gallery-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 52px 24px 24px;
+      background: linear-gradient(to top, rgba(18,14,12,0.86), transparent);
+      color: #fff;
+    }
+    .gallery-caption h3 {
+      font-family: var(--ff-head);
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .gallery-caption p {
+      font-size: 13px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.68);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      background: rgba(18,14,12,0.92);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.28s var(--ease);
+    }
+    .lightbox.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .lightbox-content {
+      width: min(1040px, 100%);
+      transform: translateY(12px) scale(0.98);
+      transition: transform 0.28s var(--ease);
+    }
+    .lightbox.open .lightbox-content { transform: translateY(0) scale(1); }
+    .lightbox img {
+      width: 100%;
+      max-height: 78vh;
+      object-fit: contain;
+    }
+    .lightbox-meta {
+      margin-top: 16px;
+      color: #fff;
+      text-align: center;
+    }
+    .lightbox-meta h3 {
+      font-family: var(--ff-head);
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .lightbox-meta p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+    }
+    .lightbox-btn {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,0.24);
+      background: rgba(255,255,255,0.06);
+      color: #fff;
+      cursor: pointer;
+      border-radius: 3px;
+      font-size: 28px;
+      line-height: 1;
+      transition: background 0.25s var(--ease), border-color 0.25s var(--ease);
+    }
+    .lightbox-btn:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.48);
+    }
+    .lightbox-close { top: 24px; right: 24px; }
+    .lightbox-prev { left: 24px; top: 50%; transform: translateY(-50%); }
+    .lightbox-next { right: 24px; top: 50%; transform: translateY(-50%); }
+
+    #why {
+      padding: 110px 0;
+      background: #F3EDE2;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .why-card {
+      background: var(--ivory);
+      border: 1px solid rgba(34,34,34,0.08);
+      padding: 38px 28px;
+      transition: background 0.25s var(--ease), transform 0.25s var(--ease);
+    }
+    .why-card:hover {
+      background: #fff;
+      transform: translateY(-2px);
+    }
+    .why-card h3 {
+      font-family: var(--ff-head);
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 14px;
+      color: var(--charcoal);
+    }
+    .why-card p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--charcoal-80);
+    }
+
+    #sticky-cta {
+      display: block;
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      left: auto;
+      z-index: 200;
+      background: transparent;
+      border: none;
+      padding: 0;
+    }
+    #sticky-cta .btn {
+      flex: none;
+      justify-content: center;
+      padding: 14px 22px;
+      font-size: 13px;
+      box-shadow: 0 12px 32px rgba(34,34,34,0.18);
+    }
+
+    .footer-inner {
+      align-items: flex-start;
+    }
+    .footer-brand {
+      max-width: 390px;
+    }
+    .footer-brand h3 {
+      font-family: var(--ff-head);
+      font-size: 24px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.82);
+      margin: 18px 0 8px;
+    }
+    .footer-desc,
+    .footer-note {
+      font-size: 13px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.42);
+    }
+    .footer-note {
+      margin-top: 14px;
+      color: rgba(255,255,255,0.32);
+    }
+    .footer-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    #capacity,
+    #studio-story,
+    #equipment {
+      padding: 110px 0;
+      background: #F3EDE2;
+    }
+    .capacity-grid,
+    .equipment-grid {
+      display: grid;
+      gap: 2px;
+    }
+    .capacity-grid { grid-template-columns: repeat(4, 1fr); }
+    .equipment-grid { grid-template-columns: repeat(4, 1fr); }
+    .capacity-card,
+    .equipment-card {
+      background: var(--ivory);
+      border: 1px solid rgba(34,34,34,0.08);
+      padding: 34px 26px;
+      transition: background 0.25s var(--ease), transform 0.25s var(--ease);
+    }
+    #capacity .capacity-card { background: #F3EDE2; }
+    .capacity-card:hover,
+    .equipment-card:hover {
+      background: #fff;
+      transform: translateY(-2px);
+    }
+    .capacity-card h3,
+    .equipment-card h3 {
+      font-family: var(--ff-head);
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 1.25;
+      color: var(--charcoal);
+      margin-bottom: 12px;
+    }
+    .capacity-card p,
+    .equipment-card p {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--terra);
+    }
+    .studio-copy {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .studio-copy p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: var(--charcoal-80);
+      margin-bottom: 20px;
+    }
     /* Reveal on scroll */
     .reveal {
       opacity: 0;
@@ -704,7 +1140,12 @@
       .kitchen-image { order: 2; }
       .about-image img,
       .kitchen-image img { height: 340px; }
-      .who-cards { grid-template-columns: 1fr; }
+      .who-cards,
+      .pricing-grid,
+      .why-grid,
+      .capacity-grid,
+      .equipment-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { column-count: 2; }
       .included-grid { grid-template-columns: repeat(2, 1fr); }
       .feature-bg { background-attachment: scroll; }
       .nav-cta { display: none; }
@@ -712,17 +1153,17 @@
 
     @media (max-width: 600px) {
       .container { padding: 0 18px; }
-      #about, #kitchen { padding: 80px 0; }
+      #about, #kitchen, #pricing, #gallery, #why, #capacity, #equipment, #studio-story { padding: 80px 0; }
       #who, #included { padding: 72px 0; }
       #cta { padding: 80px 0; }
       #hero { padding-bottom: 100px; }
       .hero-btns .btn { flex: 1; justify-content: center; min-width: 140px; }
       .included-grid { grid-template-columns: repeat(2, 1fr); }
       .kitchen-features { grid-template-columns: 1fr; }
-      #sticky-cta { display: flex; }
-      body { padding-bottom: 70px; }
-      .footer-inner { flex-direction: column; text-align: center; }
-    }
+      #sticky-cta { left: 50%; right: auto; bottom: 18px; transform: translateX(-50%); }
+      .gallery-grid { column-count: 1; }
+      .capacity-grid,
+      .equipment-grid,
 
     @media (max-width: 400px) {
       .hero-h1 { font-size: 36px; }
@@ -759,7 +1200,7 @@
       <div class="hero-content">
         <p class="hero-location">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          Kokapet, Hyderabad
+          Raichandani Business Bay, Kokapet, Hyderabad
         </p>
         <h1 class="hero-h1">Counter Studio</h1>
         <p class="hero-tagline">Create. Teach. Launch.</p>
@@ -802,8 +1243,8 @@
   <section id="who">
     <div class="container">
       <div class="who-header reveal">
-        <p class="section-label">The Studio is for</p>
-        <h2>Who is this space for?</h2>
+        <p class="section-label">Perfect For</p>
+        <h2>Created For Culinary Professionals</h2>
       </div>
       <div class="who-cards">
 
@@ -901,7 +1342,58 @@
     </div>
   </section>
 
-  <!-- ─── SECTION 6: WHAT'S INCLUDED ─── -->
+
+  <!-- SECTION 6: PRICING & AVAILABILITY -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Pricing &amp; Availability</p>
+        <h2>Flexible Rental Options</h2>
+        <p>Whether you're filming content, hosting a workshop or developing a new product, choose the booking format that works best for you.</p>
+      </div>
+      <div class="pricing-grid">
+        <article class="pricing-card reveal">
+          <p class="pricing-label">Half Day</p>
+          <h3>Up to 4 Hours</h3>
+          <p class="pricing-duration">Compact studio access</p>
+          <p class="pricing-price">₹7,500</p>
+          <ul>
+            <li>Content shoots</li>
+            <li>Product testing</li>
+            <li>Small sessions</li>
+          </ul>
+        </article>
+        <article class="pricing-card recommended reveal reveal-delay-1">
+          <p class="pricing-label">Full Day</p>
+          <h3>Up to 8 Hours</h3>
+          <p class="pricing-duration">Most requested format</p>
+          <p class="pricing-price">₹12,000</p>
+          <ul>
+            <li>Workshops</li>
+            <li>Masterclasses</li>
+            <li>Brand sessions</li>
+          </ul>
+        </article>
+        <article class="pricing-card reveal reveal-delay-2">
+          <p class="pricing-label">Extended Day</p>
+          <h3>Up to 10+ Hours</h3>
+          <p class="pricing-duration">For larger productions</p>
+          <p class="pricing-price">₹15,000</p>
+          <ul>
+            <li>Full productions</li>
+            <li>Large workshops</li>
+            <li>Multi-session events</li>
+          </ul>
+        </article>
+      </div>
+      <p class="pricing-note reveal">Multi-day workshops, recurring creator bookings and custom studio packages available on request.</p>
+      <div class="section-actions reveal">
+        <a href="https://forms.gle/33P8eHRHRikQD4ET9" target="_blank" rel="noopener" class="btn btn-primary">Check Availability</a>
+        <a href="https://wa.me/918886787766" target="_blank" rel="noopener" class="btn btn-outline-ivory">WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+  <!-- ─── SECTION 6: WHAT''S INCLUDED ─── -->
   <section id="included">
     <div class="container">
       <div class="included-header reveal">
@@ -1007,7 +1499,138 @@
     </div>
   </section>
 
-  <!-- ─── SECTION 7: CTA ─── -->
+
+  <!-- SECTION 7: VISUALISE YOUR SETUP -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Gallery</p>
+        <h2>Visualise Your Setup</h2>
+        <p>Explore how Counter Studio adapts to content creation, workshops, product development and culinary events.</p>
+      </div>
+      <div class="gallery-filters reveal" aria-label="Gallery filters">
+        <button class="gallery-filter active" type="button" data-filter="all">All</button>
+        <button class="gallery-filter" type="button" data-filter="workshops">Workshops</button>
+        <button class="gallery-filter" type="button" data-filter="content">Content Creation</button>
+        <button class="gallery-filter" type="button" data-filter="product">Product Development</button>
+        <button class="gallery-filter" type="button" data-filter="kitchen">Kitchen</button>
+      </div>
+      <div class="gallery-grid">
+        <!-- Workshop Images -->
+        <article class="gallery-item reveal" data-category="workshops" data-title="Workshop Setup" data-caption="Configured for chef demonstrations and hands-on learning." data-image="workshop.jpg">
+          <div class="gallery-card"><img src="workshop.jpg" alt="Workshop setup at Counter Studio" loading="lazy" /><div class="gallery-caption"><h3>Workshop Setup</h3><p>Configured for chef demonstrations and hands-on learning.</p></div></div>
+        </article>
+        <!-- Future workshop images: add gallery-workshop-02.jpg through gallery-workshop-08.jpg here using the same gallery-item structure. -->
+
+        <!-- Content Creation Images -->
+        <article class="gallery-item reveal reveal-delay-1" data-category="content" data-title="Content Shoot" data-caption="Production-ready environment for video and photography." data-image="hero.jpg">
+          <div class="gallery-card"><img src="hero.jpg" alt="Content creation setup at Counter Studio" loading="lazy" /><div class="gallery-caption"><h3>Content Shoot</h3><p>Production-ready environment for video and photography.</p></div></div>
+        </article>
+        <!-- Future content creation images: add gallery-content-02.jpg through gallery-content-08.jpg here using the same gallery-item structure. -->
+
+        <!-- Product Development Images -->
+        <article class="gallery-item reveal reveal-delay-2" data-category="product" data-title="Recipe Development" data-caption="Professional kitchen setup for testing and refinement." data-image="about.jpg">
+          <div class="gallery-card"><img src="about.jpg" alt="Recipe development workspace at Counter Studio" loading="lazy" /><div class="gallery-caption"><h3>Recipe Development</h3><p>Professional kitchen setup for testing and refinement.</p></div></div>
+        </article>
+        <!-- Future product development images: add gallery-product-02.jpg through gallery-product-08.jpg here using the same gallery-item structure. -->
+
+        <!-- Event Images -->
+        <article class="gallery-item reveal" data-category="workshops product" data-title="Brand Launch" data-caption="Ideal for tastings, presentations and product showcases." data-image="workshop.jpg">
+          <div class="gallery-card"><img src="workshop.jpg" alt="Brand launch setup at Counter Studio" loading="lazy" /><div class="gallery-caption"><h3>Brand Launch</h3><p>Ideal for tastings, presentations and product showcases.</p></div></div>
+        </article>
+        <!-- Future event images: add gallery-event-02.jpg through gallery-event-08.jpg here. Use data-category="workshops product" for launches/tastings or the most relevant existing filter category. -->
+
+        <!-- Kitchen Images -->
+        <article class="gallery-item reveal reveal-delay-1" data-category="kitchen" data-title="Kitchen Workspace" data-caption="Commercial-grade culinary environment." data-image="kitchen.jpg">
+          <div class="gallery-card"><img src="kitchen.jpg" alt="Commercial-grade kitchen workspace at Counter Studio" loading="lazy" /><div class="gallery-caption"><h3>Kitchen Workspace</h3><p>Commercial-grade culinary environment.</p></div></div>
+        </article>
+        <!-- Future kitchen images: add gallery-kitchen-02.jpg through gallery-kitchen-08.jpg here using the same gallery-item structure. -->
+      </div>
+      <div class="section-actions reveal">
+        <a href="https://forms.gle/33P8eHRHRikQD4ET9" target="_blank" rel="noopener" class="btn btn-primary">Check Availability</a>
+        <a href="https://wa.me/918886787766" target="_blank" rel="noopener" class="btn btn-outline-ivory">WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: WHY COUNTER STUDIO -->
+  <section id="why">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Why Choose Counter Studio</p>
+        <h2>Built For Serious Culinary Projects</h2>
+      </div>
+      <div class="why-grid">
+        <article class="why-card reveal"><h3>Professional Kitchen</h3><p>Commercial-grade equipment including Rational oven and dedicated prep space.</p></article>
+        <article class="why-card reveal reveal-delay-1"><h3>Workshop Ready</h3><p>Host demonstrations, training sessions and culinary masterclasses.</p></article>
+        <article class="why-card reveal reveal-delay-2"><h3>Content Creation Friendly</h3><p>Designed for filming, photography and social content production.</p></article>
+        <article class="why-card reveal reveal-delay-3"><h3>Convenient Location</h3><p>Kokapet location with parking, vendor access and easy logistics.</p></article>
+      </div>
+      <div class="section-actions reveal">
+        <a href="https://forms.gle/33P8eHRHRikQD4ET9" target="_blank" rel="noopener" class="btn btn-primary">Check Availability</a>
+        <a href="https://wa.me/918886787766" target="_blank" rel="noopener" class="btn btn-outline-ivory">WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION 9: CAPACITY -->
+  <section id="capacity">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Capacity</p>
+        <h2>Designed for Multiple Formats</h2>
+        <p>Flexible layouts for workshops, filming, development sessions and private events.</p>
+      </div>
+      <div class="capacity-grid">
+        <article class="capacity-card reveal"><h3>Workshops</h3><p>12-15 Guests</p></article>
+        <article class="capacity-card reveal reveal-delay-1"><h3>Chef Demonstrations</h3><p>15-20 Guests</p></article>
+        <article class="capacity-card reveal reveal-delay-2"><h3>Content Shoots</h3><p>4-8 Crew Members</p></article>
+        <article class="capacity-card reveal reveal-delay-3"><h3>Tastings &amp; Product Launches</h3><p>10-15 Guests</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: PROFESSIONAL EQUIPMENT -->
+  <section id="equipment">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Equipment</p>
+        <h2>Professional Equipment Available</h2>
+        <p>Built for serious culinary projects.</p>
+      </div>
+      <div class="equipment-grid">
+        <article class="equipment-card reveal"><h3>Rational Combi Oven</h3><p>Kitchen</p></article>
+        <article class="equipment-card reveal reveal-delay-1"><h3>KitchenAid Mixer</h3><p>Prep</p></article>
+        <article class="equipment-card reveal reveal-delay-2"><h3>Commercial Refrigerator</h3><p>Cold Storage</p></article>
+        <article class="equipment-card reveal reveal-delay-3"><h3>Commercial Freezer</h3><p>Cold Storage</p></article>
+        <article class="equipment-card reveal"><h3>Display Chiller</h3><p>Presentation</p></article>
+        <article class="equipment-card reveal reveal-delay-1"><h3>Stainless Prep Stations</h3><p>Workspace</p></article>
+        <article class="equipment-card reveal reveal-delay-2"><h3>Speed Rack</h3><p>Production</p></article>
+        <article class="equipment-card reveal reveal-delay-3"><h3>Studio Lighting Support</h3><p>Content</p></article>
+        <article class="equipment-card reveal"><h3>Workshop Seating</h3><p>Events</p></article>
+        <article class="equipment-card reveal reveal-delay-1"><h3>Whiteboard</h3><p>Teaching</p></article>
+        <article class="equipment-card reveal reveal-delay-2"><h3>WiFi</h3><p>Connectivity</p></article>
+        <article class="equipment-card reveal reveal-delay-3"><h3>Air Conditioning</h3><p>Comfort</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11: ABOUT THE STUDIO -->
+  <section id="studio-story">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">About the Studio</p>
+        <h2>Designed by Culinary Professionals</h2>
+      </div>
+      <div class="studio-copy reveal">
+        <p>Counter Studio was originally developed as a professional culinary workspace for recipe development, education, content creation and premium food experiences.</p>
+        <p>The studio has been thoughtfully designed by professional pastry chefs and culinary educators to support workshops, content production, recipe testing and food innovation.</p>
+        <p>Every element of the space has been planned around the practical needs of chefs, creators, educators and food brands.</p>
+      </div>
+    </div>
+  </section>
+  <!-- ─── SECTION 12: CTA ─── -->
   <section id="cta">
     <div class="container">
       <div class="cta-inner reveal">
@@ -1024,29 +1647,48 @@
       </div>
     </div>
   </section>
-
   <!-- ─── FOOTER ─── -->
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-logo">
-          <img src="CounterStudio.png" alt="Counter Studio" />
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="CounterStudio.png" alt="Counter Studio" />
+          </div>
+          <h3>Counter Studio</h3>
+          <p class="footer-location">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Kokapet, Hyderabad
+          </p>
+          <p class="footer-desc">Professional culinary studio for content creation, workshops and product development.</p>
         </div>
-        <p class="footer-location">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          Kokapet, Hyderabad
-        </p>
-        <p class="footer-copy">© 2025 Counter Studio. All rights reserved.</p>
+        <div class="footer-actions">
+          <a href="https://wa.me/918886787766" target="_blank" rel="noopener" class="btn btn-outline-dark">WhatsApp</a>
+          <a href="https://forms.gle/33P8eHRHRikQD4ET9" target="_blank" rel="noopener" class="btn btn-dark">Request Availability</a>
+        </div>
+        <p class="footer-copy">© 2026 Counter Studio. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- ─── MOBILE STICKY CTA ─── -->
-  <div id="sticky-cta" aria-label="Quick actions">
-    <a href="https://forms.gle/33P8eHRHRikQD4ET9" target="_blank" rel="noopener" class="btn btn-primary">Request Availability</a>
-    <a href="https://wa.me/918886787766" target="_blank" rel="noopener" class="btn btn-outline-dark">WhatsApp</a>
+  <!-- STICKY WHATSAPP CTA -->
+  <div id="sticky-cta" aria-label="WhatsApp Counter Studio">
+    <a href="https://wa.me/918886787766" target="_blank" rel="noopener" class="btn btn-primary">WhatsApp Us</a>
   </div>
 
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Gallery preview">
+    <button class="lightbox-btn lightbox-close" type="button" aria-label="Close gallery">×</button>
+    <button class="lightbox-btn lightbox-prev" type="button" aria-label="Previous image">‹</button>
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="" />
+      <div class="lightbox-meta">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxCaption"></p>
+      </div>
+    </div>
+    <button class="lightbox-btn lightbox-next" type="button" aria-label="Next image">›</button>
+  </div>
   <!-- ─── JS ─── -->
   <script>
     // Header scroll state
@@ -1079,6 +1721,74 @@
 
     revealEls.forEach(el => observer.observe(el));
 
+
+    // Gallery filtering and lightbox
+    const galleryFilters = document.querySelectorAll('.gallery-filter');
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
+    let activeGalleryItems = galleryItems;
+    let activeLightboxIndex = 0;
+
+    galleryFilters.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        galleryFilters.forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+        galleryItems.forEach(item => {
+          const categories = item.dataset.category.split(' ');
+          item.classList.toggle('is-hidden', filter !== 'all' && !categories.includes(filter));
+        });
+        activeGalleryItems = galleryItems.filter(item => !item.classList.contains('is-hidden'));
+      });
+    });
+
+    function openLightbox(item) {
+      activeGalleryItems = galleryItems.filter(entry => !entry.classList.contains('is-hidden'));
+      activeLightboxIndex = activeGalleryItems.indexOf(item);
+      updateLightbox();
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    function updateLightbox() {
+      const item = activeGalleryItems[activeLightboxIndex];
+      lightboxImage.src = item.dataset.image;
+      lightboxImage.alt = item.dataset.title;
+      lightboxTitle.textContent = item.dataset.title;
+      lightboxCaption.textContent = item.dataset.caption;
+    }
+
+    function moveLightbox(direction) {
+      activeLightboxIndex = (activeLightboxIndex + direction + activeGalleryItems.length) % activeGalleryItems.length;
+      updateLightbox();
+    }
+
+    galleryItems.forEach(item => item.addEventListener('click', () => openLightbox(item)));
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', () => moveLightbox(-1));
+    lightboxNext.addEventListener('click', () => moveLightbox(1));
+    lightbox.addEventListener('click', event => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    window.addEventListener('keydown', event => {
+      if (!lightbox.classList.contains('open')) return;
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowLeft') moveLightbox(-1);
+      if (event.key === 'ArrowRight') moveLightbox(1);
+    });
     // Hide sticky CTA near footer (avoid overlap)
     const footer = document.querySelector('footer');
     const stickyCTA = document.getElementById('sticky-cta');
